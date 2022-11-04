@@ -1,0 +1,42 @@
+.header{
+    justify-content: space-between;
+    align-items: center;
+    &__left{
+        padding: 21px 0;
+    }
+    &__right{
+        align-items: center;
+    }
+}
+.hamburg{
+    color: $c-n1;
+    padding-right: 25px;
+    cursor: pointer;
+
+}
+.dropdown{
+    align-items: center;
+    flex-direction: column;
+    @include rwd($lg){
+        flex-direction: row;
+    }
+    &-menu{
+        flex-direction: column;
+        @include rwd($lg){
+            flex-direction: row;
+        }
+    }
+}
+.active{
+
+    max-height: 0px;
+    position: absolute;
+    top:58px;
+    left: 0;
+}
+.logo{
+    width: 110px;
+}
+.sign{
+    margin-left: 32px;
+}

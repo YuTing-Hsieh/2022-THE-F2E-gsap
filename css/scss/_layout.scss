@@ -1,0 +1,45 @@
+body{
+    font-family: $font-family;
+}
+h1{
+    font-size: $fz-h1;
+    line-height: $lh-h1;
+}
+h2{
+    font-size: $fz-h2;
+    line-height: $lh-h2;
+}
+h3{
+    font-size: $fz-h3;
+    line-height: $lh-h3;
+}
+h4{
+    font-size: $fz-h4;
+    line-height: $lh-h4;
+}
+h5{
+    font-size: $fz-h5;
+    line-height: $lh-h5;
+}
+
+h1,h2,h3,h4,h5{
+    &-E{
+        letter-spacing: 10%;
+    }
+}
+.container{
+    margin: 0 auto;
+    padding: 0 16px;
+
+    @include rwd ($lg){
+        max-width: 940px;
+        padding: 32;
+    }
+}
+
+
+.d-flex{
+    display: flex;
+}
+
+
