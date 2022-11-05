@@ -7,11 +7,17 @@
 .d-block{
     display: block;
 }
+.d-md-block{
+    @include rwd($md){
+        display: block;
+    }
+}
 .d-lg-none{
     @include rwd($lg){
         display: none;
     }
 }
+
 .d-lg-block{
     @include rwd($lg){
         display: block;
@@ -22,12 +28,38 @@
         display: flex;
     }
 }
+.width-100{
+    width: 100%;
+}
+.width-lg-auto{
+    @include rwd($lg){
+        width: auto;
+    }
+}
+.p-16{
+    padding: 16px;
+}
+.px-lg-0{
+    @include rwd($lg){
+        padding-right: 0px;
+        padding-left: 0px;
+    }
+}
+.pos-r{
+    position: relative;
+}
+.pos-a{
+    position: absolute;
+}
 
 .navbar{
     &__item{
         padding: 0 16px;
         color: $c-n2;   
         position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
     &__item:hover{
         color: $c-n1;
@@ -47,14 +79,30 @@
 }
 
 .btn{
-    color: $c-n1;
-    background-color:transparent;
     border: 1px solid;
     border-radius: 40px;
-}
-.btn-small{
-    padding: 10px 16px;
-}
-.btn-big{
-    padding: 8px 39px;
+    cursor: pointer;
+    &-small{
+        padding: 8px 16px 10px 16px;
+    }
+    &-big{
+        padding: 8px 39px;
+        border-radius: 50px;
+        font-size: 20px;
+        line-height: 36px;
+        font-weight: bold;
+        letter-spacing: 0.02rem;
+    }
+    &-light{
+        color: $c-n1;
+        background-color:transparent;
+        &:hover{
+            color: $c-g1;
+            background: rgba($c-g1, 0.2);
+            box-shadow: 0px 0px 10px rgba(85, 255, 173, 0.6);
+        }
+    }
+    &-yellow{
+        background: $c-y1;
+    }
 }

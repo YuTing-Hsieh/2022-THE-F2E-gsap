@@ -3,40 +3,246 @@
     align-items: center;
     &__left{
         padding: 21px 0;
+        align-items: center;
+        @include rwd($lg){
+            padding: 34px 0;
+        }
     }
     &__right{
         align-items: center;
     }
+    @include rwd($md){
+        margin-bottom: 14px;
+    }
+    @include rwd($md){
+        margin-bottom: 0px;
+    }
 }
-.hamburg{
-    color: $c-n1;
+.i-hamburg{
     padding-right: 25px;
+    font-size: 30px;
     cursor: pointer;
 
 }
+.i-xmark{
+    font-size: 24px;
+}
 .dropdown{
-    align-items: center;
-    flex-direction: column;
     @include rwd($lg){
         flex-direction: row;
+        align-items: center;
     }
     &-menu{
         flex-direction: column;
+        align-items: center;
         @include rwd($lg){
             flex-direction: row;
+        }
+        .navbar__item{
+            padding: 16px 0;
+            @include rwd($lg){
+                padding: 0 16px;
+            }
+            &:hover::after{
+                bottom: 0px;
+                @include rwd($lg){
+                    bottom:-8px;
+                }
+            }
         }
     }
 }
 .active{
-
-    max-height: 0px;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
     position: absolute;
-    top:58px;
+    top:72px;
     left: 0;
+    z-index: 100;
+    @include rwd($lg){
+        flex-direction: row;
+        align-items: center;
+        position: relative;
+        top:auto;
+        left:auto
+    }
 }
 .logo{
     width: 110px;
+    @include rwd($lg){
+        width: 180px;
+    }
 }
 .sign{
-    margin-left: 32px;
+    text-align: center;
+    margin-top: 16px;
+    margin-bottom: 16px;
+    @include rwd($lg){
+        margin-top: 0px;
+        margin-bottom: 0px;
+        margin-left: 32px;
+    }
+}
+.hero{
+    &__content{
+        flex-direction: column;
+        align-items: center;
+        padding-top: 115px;
+        padding-bottom: 210px;
+        @include rwd($sm){
+            padding-bottom: 108.36px;
+        }
+        @include rwd($md){
+            padding-top: 63.64px;
+        }
+        @include rwd($lg){
+            padding-top:82.49px;
+            padding-bottom: 136.46px;
+
+        }
+        @include rwd($xl){
+            padding-top: 99.66px;
+            padding-bottom: 173.65px;
+
+        }
+    }
+}
+.title-th{
+    font-size: 27px;
+    line-height: 28.84px;
+    letter-spacing: 0.2rem;
+    text-shadow: -1.32px -1.36px $c-g1,1.36px 2.05px $c-p1;
+    font-style: italic;
+    top: -35px;
+    right: calc( 50% - 43px);
+    @include rwd ($md){
+        top: -22.41px;
+        right: 0px;
+    }
+    @include rwd($lg){
+        font-size: 34px;
+        line-height: 36.31px;
+        top: -29.88px;
+    }
+    @include rwd($xl){
+        font-size: 42px;
+        line-height: 44.86px;
+        top: -30.69px;
+       
+    }
+}
+.title{
+    font-size: 42px;
+    line-height: 50.4px;
+    letter-spacing: 0.2rem;
+    margin-top: 0px;
+    margin-bottom: 15px;
+    @include rwd($md){
+        padding-right: 66px;
+    }
+    @include rwd($lg){
+        font-size: 52px;
+        line-height: 62.4px;
+        margin-bottom: 18px;
+        padding-right: 94.12px;
+    }
+    @include rwd($xl){
+        font-size: 62px;
+        line-height: 74.4px;
+        margin-bottom: 24px;
+        padding-right:126.29px;
+    }
+    text-shadow: -2.7px -2.05px $c-g1,2.05px 3.42px $c-p1;
+}
+.subTitle{
+    font-size: 20px;
+    letter-spacing: 0.8rem;
+    font-weight: bold;
+    margin-bottom: 45.34px;
+    line-height: 20px;
+    @include rwd($md){
+        font-size: 16px;
+        margin-bottom: 51.96px;
+    }
+    @include rwd($lg){
+        font-size: 20px;
+        margin-bottom: 67.32px;
+    }
+    @include rwd($xl){
+        margin-bottom: 79.23px;
+    }
+}
+.img{
+    &-code{
+        width: 70.48px;
+        top: 2px;
+        left: 25px;
+        transform: rotate(-19.31deg);
+        @include rwd($sm){
+            top: 0px;
+            left: 162.5px;
+        }
+        @include rwd($md){
+            width: 77.31px;
+            top: 73.23px;
+            left: 63.37px;
+        }
+        @include rwd($lg){
+            width: 98.65px;
+            top: 93.44px;
+            left: 80.86px;
+        }
+        @include rwd($xl){
+            width: 111.13px;
+            top: 106px;
+            left: 91.09px;
+        }
+
+    }
+    &-dashboard{
+        width: 105.26px;
+        top: 317px;
+        right: 15.05px;
+        transform: rotate(16.6deg);
+        @include rwd($sm){
+            top: 315px;
+            right: 152.55px;
+        }
+        @include rwd($md){
+            width: 128.84px;
+            top: 109.26px;
+            right: 137.85px;
+        }
+        @include rwd($lg){
+            width: 164.41px;
+            top: 189.42px;
+            right: 175.91px;
+        }
+        @include rwd($xl){
+            width: 185.21px;
+            top: 157.79px;
+            right: 198.16px;
+        }
+    }
+    &-borderDash1{
+        width: 100.77px;
+        top: 55.66px;
+        right: 63px;
+        @include rwd($lg){
+            width: 128.58px;
+            top: 71.03px;
+            right: 80.86px;
+        }
+    }
+    &-borderDash2{
+        width: 124.7px;
+        top: 134.51px;
+        left: 163.73px;
+        @include rwd($lg){
+            width: 159.12px;
+            top: 171.64px;
+            left: 208.93px;
+        }
+    }
 }

@@ -1,8 +1,8 @@
 /*rwd*/
-$sm: 576px;
+$sm: 650px; /*650*/
 $md: 768px;
-$lg: 992px;
-$xl: 1200px;
+$lg: 980px; /*980*/
+$xl: 1184px; /*1184*/
 
 /*color*/
 $c-n1: #FFFFFF;
@@ -42,6 +42,7 @@ $c-cardStroke: linear-gradient(100.38deg, #313A65 3.95%, rgba(49, 58, 101, 0) 10
 }
 
 $font-family: 'custom-noto-sans', sans-serif;
+$font-family-customer: 'Montserrat', sans-serif;
 
 
 $fz-base: 1rem;

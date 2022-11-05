@@ -14,32 +14,53 @@
         <div class="header container d-flex ">
             <div class="header__left d-flex">
                 <span class="d-block d-lg-none">
-                    <i class="fa-solid fa-bars hamburg"></i>
+                    <i class="fa-solid fa-bars i-hamburg"></i>
                 </span>
                 <a href="index.html"><img src="image/navbar-logo.png" alt="The F2E logo" class="logo"></a>
             </div>
             <nav class="header__right">
-                <ul class="dropdown d-none d-lg-flex">
-                    <li>
+                <ul class="dropdown d-none d-lg-flex width-100 width-lg-auto bg-n5 p-16 px-lg-0">
+                    <li class="d-lg-none">
+                        <i class="fa-solid fa-xmark i-xmark"></i>
+                    </li>
+                    <li class="width-100 width-lg-auto">
                         <ul class="navbar dropdown-menu d-flex">
                             <li><a href="" class="navbar__item">關卡資訊</a></li>
                             <li><a href="" class="navbar__item">攻略資源</a></li>
                             <li><a href="" class="navbar__item">求職專區</a></li>
                         </ul>
                     </li>
-                    <li><div class="btn btn-small sign ">登入</div></li>
+                    <li class="width-100 width-lg-auto">
+                        <div class="btn btn-small btn-light sign ">登入</div>
+                    </li>
                 </ul>  
-                <button class="btn btn-small d-block d-lg-none">立即報名</button>
+                <button class="btn btn-small btn-light d-block d-lg-none">立即報名</button>
             </nav>
         </div>
         
     </header>
+    <section class="hero bg-n5">
+        <div class="pos-r">
+            <div class="hero__content d-flex">
+                <div class="pos-r">
+                    <h2 class="title-th pos-a">4TH</h2>
+                    <h1 class="title">THE F2E</h1>
+                </div>
+                <h2 class="subTitle">互動式網頁設計</h2>    
+                <button class="btn btn-big btn-yellow">立即報名</button>         
+            </div>
+            <img src="image/code.png" alt="code" class="img-code pos-a">
+            <img src="image/borderDash2.png" alt="borderDash2" class="img-borderDash2 pos-a d-none d-md-block">
+            <img src="image/borderDash1.png" alt="borderDash1" class="img-borderDash1 pos-a d-none d-md-block">
+            <img src="image/dashboard.png" alt="dashboard" class="img-dashboard pos-a">
+        </div>
+    </section>
 </body>
 </html>
 
 <script>
 $(document).ready(function () {
-    $('.hamburg').click(function(e) {
+    $('.i-hamburg').click(function(e) {
         e.preventDefault();
         $('.dropdown').toggleClass('active')
     })
