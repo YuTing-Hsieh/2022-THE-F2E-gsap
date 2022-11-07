@@ -261,3 +261,81 @@
         }
     }
 }
+
+.question{
+    flex-direction: column;
+    align-items: center;
+    &__q2{
+        margin-top: -27.05px;
+    }
+    &__q3{
+        margin-top: -20px;
+    }
+}
+.img{
+    &-q1{
+        &__text{
+            width: 300.09px;
+            padding-top: 46.78px;
+            padding-right: 25.63px;
+        }
+        &__1{
+            width: 105.21px;
+            top: -5px;
+            left: 47px;
+            transform: rotate(-4.57deg);
+        }
+        &__2{
+            width: 23.69px;
+            top: 12px;
+            left: 181px;
+        }
+        &__3{
+            width: 65.49px;
+            top: -7.14px;
+            left: 226.4px;
+        }
+    }
+    &-q2{
+        &__text{
+            width: 336.42px;
+            padding-top: 21.03px;
+            padding-left: 95.52px;
+            padding-bottom: 23.26px;
+        }
+        &__1{
+            width: 12.85px;
+            top: 49px;
+            left: 68px;
+        }
+        &__2{
+            width: 96.28px;
+            top: 100px;
+            left: 1px;
+        }
+        &__3{
+            width: 57.02px;
+            top: 117px;
+            left: 241px;
+        }
+    }
+    &-q3{
+        &__text{
+            width: 320.31px;
+            padding-top: 47.66px;
+            padding-right: 37.31px;
+            transform: rotate(-11.03deg);
+        }
+        &__1{
+            width: 131.54px;
+            top: -5px;
+            left: 95.68px;
+            transform: rotate(-10.43deg);
+        }
+        &__2{
+            width: 72.91px;
+            top: 132.21px;
+            left: 242.42px;
+        }
+    }
+}
