@@ -1,6 +1,17 @@
 .header{
     justify-content: space-between;
     align-items: center;
+    position: fixed;
+    top: 0px;
+    z-index: 100;
+    @include rwd($md){
+        margin-bottom: 14px;
+    }
+    @include rwd($lg){
+        margin-bottom: 0px;
+        position: relative;
+        top: auto;
+    }
     &__left{
         padding: 21px 0;
         align-items: center;
@@ -11,12 +22,6 @@
     &__right{
         align-items: center;
     }
-    @include rwd($md){
-        margin-bottom: 14px;
-    }
-    @include rwd($md){
-        margin-bottom: 0px;
-    }
 }
 .i-hamburg{
     padding-right: 25px;
@@ -26,6 +31,7 @@
 }
 .i-xmark{
     font-size: 24px;
+    cursor: pointer;
 }
 .dropdown{
     @include rwd($lg){
@@ -91,10 +97,11 @@
         padding-top: 115px;
         padding-bottom: 210px;
         @include rwd($sm){
-            padding-bottom: 108.36px;
+            padding-bottom: 208px;
         }
         @include rwd($md){
             padding-top: 63.64px;
+            padding-bottom: 108.36px;
         }
         @include rwd($lg){
             padding-top:82.49px;
@@ -105,6 +112,14 @@
             padding-top: 99.66px;
             padding-bottom: 173.65px;
 
+        }
+    }
+    & .marquee{
+        @include rwd($md){
+            margin-bottom: 14px;
+        }
+        @include rwd($lg){
+            margin-bottom: 0px;
         }
     }
 }

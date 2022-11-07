@@ -420,6 +420,7 @@ a {
 body {
   font-family: "custom-noto-sans", sans-serif;
   color: #FFFFFF;
+  background: #06102B;
 }
 
 h1 {
@@ -530,6 +531,15 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
   position: absolute;
 }
 
+.headerFixedmt {
+  margin-top: 72px;
+}
+@media screen and (min-width: 980px) {
+  .headerFixedmt {
+    margin-top: 0px;
+  }
+}
+
 .navbar__item {
   padding: 0 16px;
   color: #858993;
@@ -583,9 +593,38 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
   background: #FFE34E;
 }
 
+.marquee {
+  overflow: hidden;
+  max-width: 100%;
+}
+.marquee-content {
+  display: inline-flex;
+}
+.marquee img {
+  width: auto;
+}
+.marquee-hero {
+  height: 34px;
+}
+
 .header {
   justify-content: space-between;
   align-items: center;
+  position: fixed;
+  top: 0px;
+  z-index: 100;
+}
+@media screen and (min-width: 768px) {
+  .header {
+    margin-bottom: 14px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .header {
+    margin-bottom: 0px;
+    position: relative;
+    top: auto;
+  }
 }
 .header__left {
   padding: 21px 0;
@@ -599,16 +638,6 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
 .header__right {
   align-items: center;
 }
-@media screen and (min-width: 768px) {
-  .header {
-    margin-bottom: 14px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .header {
-    margin-bottom: 0px;
-  }
-}
 
 .i-hamburg {
   padding-right: 25px;
@@ -618,6 +647,7 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
 
 .i-xmark {
   font-size: 24px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 980px) {
@@ -701,12 +731,13 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
 }
 @media screen and (min-width: 650px) {
   .hero__content {
-    padding-bottom: 108.36px;
+    padding-bottom: 208px;
   }
 }
 @media screen and (min-width: 768px) {
   .hero__content {
     padding-top: 63.64px;
+    padding-bottom: 108.36px;
   }
 }
 @media screen and (min-width: 980px) {
@@ -719,6 +750,16 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
   .hero__content {
     padding-top: 99.66px;
     padding-bottom: 173.65px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .hero .marquee {
+    margin-bottom: 14px;
+  }
+}
+@media screen and (min-width: 980px) {
+  .hero .marquee {
+    margin-bottom: 0px;
   }
 }
 

@@ -51,6 +51,12 @@
 .pos-a{
     position: absolute;
 }
+.headerFixedmt{
+    margin-top: 72px;
+    @include rwd($lg){
+        margin-top: 0px;
+    }
+}
 
 .navbar{
     &__item{
@@ -104,5 +110,19 @@
     }
     &-yellow{
         background: $c-y1;
+    }
+}
+
+.marquee{
+    overflow: hidden;
+    max-width: 100%;
+    &-content{
+        display: inline-flex;
+    }
+    img {
+        width: auto;       
+    }
+    &-hero{
+        height: 34px;
     }
 }
