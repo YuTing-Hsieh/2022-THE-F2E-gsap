@@ -7,6 +7,11 @@
 .d-block{
     display: block;
 }
+.d-md-none{
+    @include rwd($md){
+        display: none;
+    }
+}
 .d-md-block{
     @include rwd($md){
         display: block;
@@ -51,6 +56,16 @@
 .pos-a{
     position: absolute;
 }
+.text-center{
+    text-align: center;
+}
+.fontFamily-eTitle{
+    font-family: $font-family-monument;
+}
+.fontFamily-eContent{
+    font-family: $font-family-montserrat;
+}
+
 .headerFixedmt{
     margin-top: 72px;
     @include rwd($lg){
@@ -125,4 +140,58 @@
     &-hero{
         height: 34px;
     }
+    &-banner{
+        height: 40px;
+        @include rwd($sm){
+            height: 69.8px;
+        }
+        @include rwd($md){
+            height: 35.82px;
+        }
+        @include rwd($lg){
+            height: 45.33px;
+        }
+        @include rwd($xl){
+            height: 60px;
+        }
+    }
+ 
 }
+
+.radius{
+    &-8{
+        border-radius: 8px;
+    }
+    &-16{
+        border-radius: 16px;
+    }
+    &-32{
+        border-radius: 32px;
+    }
+}
+.card{
+    &-w300{
+        width: 300px;
+    }
+
+    &-primary{
+        background: $c-n1;
+        color: $c-p3;
+    }
+
+    &-secondary{
+        background: $c-cardBK;
+        color: $c-n1;
+    }
+
+    &-tertiary{
+        
+    }
+    &-flip{
+        width: 300px;
+        height: 360px;
+        @include cardFlip;
+    }
+}
+
+

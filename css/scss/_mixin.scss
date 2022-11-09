@@ -3,3 +3,41 @@
         @content;
     }
 }
+/* cardFlip 卡片翻轉
+<li class="cardFlip"> cardFlip另設高寬
+    <div class="front"></div>
+    <div class="back"></div>
+</li>
+*/
+@mixin cardFlip($breakPoint:$lg){
+    position: relative;
+    transform-style:preserve-3d;
+    transition:0.5s all ease;
+    cursor: pointer;
+    > *{
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &:first-child{
+            transform:rotateY(180deg);
+            backface-visibility: hidden;
+            @include rwd($breakPoint){
+                transform:rotateY(0deg);
+            }
+            &+*{
+                transform:rotateY(0deg);
+                backface-visibility: hidden;
+                @include rwd($breakPoint){
+                    transform:rotateY(180deg);
+                }
+            }
+        }
+    }       
+    &.click{
+        @include rwd($breakPoint){
+            transform:rotateY(180deg);
+        }
+    }
+}

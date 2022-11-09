@@ -1,260 +1,315 @@
-.header{
+.header {
     justify-content: space-between;
     align-items: center;
     position: fixed;
     top: 0px;
     z-index: 100;
-    @include rwd($md){
+
+    @include rwd($md) {
         margin-bottom: 14px;
     }
-    @include rwd($lg){
+
+    @include rwd($lg) {
         margin-bottom: 0px;
         position: relative;
         top: auto;
     }
-    &__left{
+
+    &__left {
         padding: 21px 0;
         align-items: center;
-        @include rwd($lg){
+
+        @include rwd($lg) {
             padding: 34px 0;
         }
     }
-    &__right{
+
+    &__right {
         align-items: center;
     }
 }
-.i-hamburg{
+
+.i-hamburg {
     padding-right: 25px;
     font-size: 30px;
     cursor: pointer;
 
 }
-.i-xmark{
+
+.i-xmark {
     font-size: 24px;
     cursor: pointer;
 }
-.dropdown{
-    @include rwd($lg){
+
+.dropdown {
+    @include rwd($lg) {
         flex-direction: row;
         align-items: center;
     }
-    &-menu{
+
+    &-menu {
         flex-direction: column;
         align-items: center;
-        @include rwd($lg){
+
+        @include rwd($lg) {
             flex-direction: row;
         }
-        .navbar__item{
+
+        .navbar__item {
             padding: 16px 0;
-            @include rwd($lg){
+
+            @include rwd($lg) {
                 padding: 0 16px;
             }
-            &:hover::after{
+
+            &:hover::after {
                 bottom: 0px;
-                @include rwd($lg){
-                    bottom:-8px;
+
+                @include rwd($lg) {
+                    bottom: -8px;
                 }
             }
         }
     }
 }
-.active{
+
+.active {
     display: flex;
     align-items: flex-end;
     flex-direction: column;
     position: absolute;
-    top:72px;
+    top: 72px;
     left: 0;
     z-index: 100;
-    @include rwd($lg){
+
+    @include rwd($lg) {
         flex-direction: row;
         align-items: center;
         position: relative;
-        top:auto;
-        left:auto
+        top: auto;
+        left: auto
     }
 }
-.logo{
+
+.logo {
     width: 110px;
-    @include rwd($lg){
+
+    @include rwd($lg) {
         width: 180px;
     }
 }
-.sign{
+
+.sign {
     text-align: center;
     margin-top: 16px;
     margin-bottom: 16px;
-    @include rwd($lg){
+
+    @include rwd($lg) {
         margin-top: 0px;
         margin-bottom: 0px;
         margin-left: 32px;
     }
 }
-.hero{
-    &__content{
+
+.hero {
+    &__content {
         flex-direction: column;
         align-items: center;
         padding-top: 115px;
         padding-bottom: 210px;
-        @include rwd($sm){
+
+        @include rwd($sm) {
             padding-bottom: 208px;
         }
-        @include rwd($md){
+
+        @include rwd($md) {
             padding-top: 63.64px;
             padding-bottom: 108.36px;
         }
-        @include rwd($lg){
-            padding-top:82.49px;
+
+        @include rwd($lg) {
+            padding-top: 82.49px;
             padding-bottom: 136.46px;
 
         }
-        @include rwd($xl){
+
+        @include rwd($xl) {
             padding-top: 99.66px;
             padding-bottom: 173.65px;
 
         }
     }
-    & .marquee{
-        @include rwd($md){
+
+    & .marquee {
+        @include rwd($md) {
             margin-bottom: 14px;
         }
-        @include rwd($lg){
+
+        @include rwd($lg) {
             margin-bottom: 0px;
         }
     }
 }
-.title-th{
+
+.title-th {
     font-size: 27px;
     line-height: 28.84px;
     letter-spacing: 0.2rem;
-    text-shadow: -1.32px -1.36px $c-g1,1.36px 2.05px $c-p1;
+    text-shadow: -1.32px -1.36px $c-g1, 1.36px 2.05px $c-p1;
     font-style: italic;
     top: -35px;
-    right: calc( 50% - 43px);
-    @include rwd ($md){
+    right: calc(50% - 43px);
+
+    @include rwd ($md) {
         top: -22.41px;
         right: 0px;
     }
-    @include rwd($lg){
+
+    @include rwd($lg) {
         font-size: 34px;
         line-height: 36.31px;
         top: -29.88px;
     }
-    @include rwd($xl){
+
+    @include rwd($xl) {
         font-size: 42px;
         line-height: 44.86px;
         top: -30.69px;
-       
+
     }
 }
-.title{
+
+.title {
     font-size: 42px;
     line-height: 50.4px;
     letter-spacing: 0.2rem;
     margin-top: 0px;
     margin-bottom: 15px;
-    @include rwd($md){
+
+    @include rwd($md) {
         padding-right: 66px;
     }
-    @include rwd($lg){
+
+    @include rwd($lg) {
         font-size: 52px;
         line-height: 62.4px;
         margin-bottom: 18px;
         padding-right: 94.12px;
     }
-    @include rwd($xl){
+
+    @include rwd($xl) {
         font-size: 62px;
         line-height: 74.4px;
         margin-bottom: 24px;
-        padding-right:126.29px;
+        padding-right: 126.29px;
     }
-    text-shadow: -2.7px -2.05px $c-g1,2.05px 3.42px $c-p1;
+
+    text-shadow: -2.7px -2.05px $c-g1,
+    2.05px 3.42px $c-p1;
 }
-.subTitle{
+
+.subTitle {
     font-size: 20px;
     letter-spacing: 0.8rem;
     font-weight: bold;
     margin-bottom: 45.34px;
     line-height: 20px;
-    @include rwd($md){
+
+    @include rwd($md) {
         font-size: 16px;
         margin-bottom: 51.96px;
     }
-    @include rwd($lg){
+
+    @include rwd($lg) {
         font-size: 20px;
         margin-bottom: 67.32px;
     }
-    @include rwd($xl){
+
+    @include rwd($xl) {
         margin-bottom: 79.23px;
     }
 }
-.img{
-    &-code{
+
+.img {
+    &-code {
         width: 70.48px;
         top: 2px;
         left: 25px;
         transform: rotate(-19.31deg);
-        @include rwd($sm){
+
+        @include rwd($sm) {
             top: 0px;
             left: 162.5px;
         }
-        @include rwd($md){
+
+        @include rwd($md) {
             width: 77.31px;
             top: 73.23px;
             left: 63.37px;
         }
-        @include rwd($lg){
+
+        @include rwd($lg) {
             width: 98.65px;
             top: 93.44px;
             left: 80.86px;
         }
-        @include rwd($xl){
+
+        @include rwd($xl) {
             width: 111.13px;
             top: 106px;
             left: 91.09px;
         }
 
     }
-    &-dashboard{
+
+    &-dashboard {
         width: 105.26px;
         top: 317px;
         right: 15.05px;
         transform: rotate(16.6deg);
-        @include rwd($sm){
+
+        @include rwd($sm) {
             top: 315px;
             right: 152.55px;
         }
-        @include rwd($md){
+
+        @include rwd($md) {
             width: 128.84px;
             top: 109.26px;
             right: 137.85px;
         }
-        @include rwd($lg){
+
+        @include rwd($lg) {
             width: 164.41px;
             top: 189.42px;
             right: 175.91px;
         }
-        @include rwd($xl){
+
+        @include rwd($xl) {
             width: 185.21px;
             top: 157.79px;
             right: 198.16px;
         }
     }
-    &-borderDash1{
+
+    &-borderDash1 {
         width: 100.77px;
         top: 55.66px;
         right: 63px;
-        @include rwd($lg){
+
+        @include rwd($lg) {
             width: 128.58px;
             top: 71.03px;
             right: 80.86px;
         }
     }
-    &-borderDash2{
+
+    &-borderDash2 {
         width: 124.7px;
         top: 134.51px;
         left: 163.73px;
-        @include rwd($lg){
+
+        @include rwd($lg) {
             width: 159.12px;
             top: 171.64px;
             left: 208.93px;
@@ -262,80 +317,406 @@
     }
 }
 
-.question{
+.question {
     flex-direction: column;
     align-items: center;
-    &__q2{
+    padding-top: 200px;
+
+    &__q2 {
         margin-top: -27.05px;
     }
-    &__q3{
+
+    &__q3 {
         margin-top: -20px;
     }
 }
-.img{
-    &-q1{
-        &__text{
+
+.img {
+    &-q1 {
+        &__text {
             width: 300.09px;
             padding-top: 46.78px;
             padding-right: 25.63px;
         }
-        &__1{
+
+        &__1 {
             width: 105.21px;
             top: -5px;
             left: 47px;
             transform: rotate(-4.57deg);
         }
-        &__2{
+
+        &__2 {
             width: 23.69px;
             top: 12px;
             left: 181px;
         }
-        &__3{
+
+        &__3 {
             width: 65.49px;
             top: -7.14px;
             left: 226.4px;
         }
     }
-    &-q2{
-        &__text{
+
+    &-q2 {
+        &__text {
             width: 336.42px;
             padding-top: 21.03px;
             padding-left: 95.52px;
             padding-bottom: 23.26px;
         }
-        &__1{
+
+        &__1 {
             width: 12.85px;
             top: 49px;
             left: 68px;
         }
-        &__2{
+
+        &__2 {
             width: 96.28px;
             top: 100px;
             left: 1px;
         }
-        &__3{
+
+        &__3 {
             width: 57.02px;
             top: 117px;
             left: 241px;
         }
     }
-    &-q3{
-        &__text{
+
+    &-q3 {
+        &__text {
             width: 320.31px;
             padding-top: 47.66px;
             padding-right: 37.31px;
             transform: rotate(-11.03deg);
         }
-        &__1{
+
+        &__1 {
             width: 131.54px;
             top: -5px;
             left: 95.68px;
             transform: rotate(-10.43deg);
         }
-        &__2{
+
+        &__2 {
             width: 72.91px;
             top: 132.21px;
             left: 242.42px;
         }
     }
+}
+
+.banner {
+    flex-direction: column;
+    align-items: center;
+    background-image: url("../../image/bannerBg.png");
+    background-size: cover;
+    color: $c-n5;
+    margin-bottom: 80px;
+
+    .marquee:first-child {
+        margin-bottom: 5px;
+
+        @include rwd($sm) {
+            margin-bottom: 13.4px;
+        }
+
+        @include rwd($sm) {
+            margin-bottom: 50.84px;
+        }
+    }
+
+    &__imgGroup {
+        flex-direction: column;
+        align-items: center;
+
+        @include rwd($md) {
+            flex-direction: row-reverse;
+        }
+
+        .img {
+            &-upHand {
+                width: 120px;
+                margin-bottom: 5px;
+
+                @include rwd($sm) {
+                    width: 208px;
+                    margin-bottom: 8.67px;
+                }
+
+                @include rwd($md) {
+                    width: 106.81px;
+                    margin-bottom: 0px;
+                    transform: rotate(55.54deg);
+                }
+
+                @include rwd($lg) {
+                    width: 136.11px;
+                }
+            }
+
+            &-bottomHand {
+                width: 120px;
+
+                @include rwd($sm) {
+                    width: 208px;
+                }
+
+                @include rwd($md) {
+                    width: 106.81px;
+                    transform: rotate(-235.54deg);
+                }
+
+                @include rwd($lg) {
+                    width: 136.11px;
+                }
+            }
+
+            &-title {
+                width: 326px;
+                margin-bottom: 13.18px;
+
+                @include rwd($sm) {
+                    width: 565.07px;
+                    margin-bottom: 22.85px;
+                }
+
+                @include rwd($md) {
+                    width: 283.03px;
+                    margin-bottom: 12.96px;
+                }
+
+                @include rwd($lg) {
+                    width: 360.69px;
+                    margin-bottom: 16.51px;
+                }
+            }
+
+            &-stamp1 {
+                width: 82.84px;
+                top: -83.72px;
+                left: 231.59px;
+
+                @include rwd($sm) {
+                    width: 143.59px;
+                    top: -145.12px;
+                    left: 401.42px;
+                }
+
+                @include rwd($md) {
+                    width: 63.86px;
+                    top: -44.55px;
+                    left: 242.25px;
+                }
+
+                @include rwd($lg) {
+                    width: 85.24px;
+                    top: -47.8px;
+                    left: 315.62px;
+                }
+            }
+
+            &-stamp2 {
+                width: 180px;
+                bottom: -180px;
+                left: -55px;
+
+                @include rwd($sm) {
+                    width: 251.16px;
+                    bottom: -290px;
+                    left: -80px;
+                }
+
+                @include rwd($md) {
+                    width: 136.26px;
+                    bottom: -100px;
+                    left: -152.33px;
+                }
+
+                @include rwd($lg) {
+                    width: 173.65px;
+                    top: 180px;
+                    left: -232.92px;
+                }
+            }
+        }
+    }
+
+    &__content {
+        font-size: 14px;
+        line-height: 21px;
+        text-align: center;
+        font-weight: bolder;
+        margin-bottom: 19.82px;
+
+        @include rwd($sm) {
+            font-size: 24.27px;
+            line-height: 36px;
+            margin-bottom: 34.75px;
+        }
+
+        @include rwd($md) {
+            font-size: 12.82px;
+            line-height: 19.23px;
+            margin-bottom: 38.31px;
+        }
+
+        @include rwd($lg) {
+            font-size: 16.3px;
+            line-height: 24.5px;
+            margin-bottom: 49.3px;
+        }
+    }
+
+    .i-xmark {
+        font-size: 14px;
+        padding: 0 31px;
+
+        @include rwd($sm) {
+            font-size: 24.27px;
+            padding: 0 53.72px;
+        }
+
+        @include rwd($md) {
+            font-size: 11.75px;
+            padding: 0 25.63px;
+        }
+
+        @include rwd($lg) {
+            font-size: 14.97px;
+            padding: 0 32.67px;
+        }
+    }
+
+}
+
+.level {
+    flex-direction: column;
+    align-items: center;
+    @include rwd($md){
+        padding-top: 120px;
+    }
+    &__titleGroup {
+        flex-direction: column;
+        margin-bottom: 60px;
+    }
+
+    &__title {
+        color: $c-g1;
+        font-weight: bold;
+        text-shadow: 0px 0px 10px rgba($c-g1, 0.6);
+        padding: 20px 40px 24px 40px;
+        border-radius: 100px;
+        border: 4px solid $c-g1;
+        filter: drop-shadow(0px 0px 10px rgba($c-g1, 0.6));
+        margin-bottom: 40px;
+    }
+
+    .img {
+        &-lightning {
+            width: 46px;
+            top: -58px;
+            left: 258px;
+        }
+    }
+
+    &__content {
+        font-size: $fz-p2;
+        line-height: $lh-p2;
+        text-align: center;
+    }
+
+    .l-list {
+        max-width: 500px;
+
+        @include rwd($lg) {
+            max-width: 1020px;
+        }
+
+        &__item {
+            padding: 0;
+
+            @include rwd($lg) {
+                padding: 0 20px;
+            }
+        }
+    }
+    &Card{
+        flex-direction: column;
+        align-items: center;
+        .card__title{
+            margin: 50px 0 16px 0;
+        }
+        .cardimg{
+            &-lock{
+                width: 188px; 
+                margin-bottom: 50px;
+            }
+        }
+    }
+    &Card-back {
+        flex-direction: column;
+        align-items: center;
+        .card__tag {
+            background: #83FAC1;
+            color: $c-n5;
+            padding: 4px 8px;
+            font-size: $fz-title;
+            line-height: $lh-title;
+            font-weight: bold;
+            margin: 16px 0;
+        }
+
+        .card__title {
+            font-weight: bold;
+            margin-bottom: 8px;
+        }
+
+        .cardimg {
+            &-dashboard {
+                width: 165px;
+            }
+            &-i3d-edit{
+                width: 128px;
+                margin: 13.5px 0;
+            }
+            &-exchange{
+                width: 126px;
+                margin: 22.5px 0;
+            }
+        }
+
+        .card__content {
+            width: 100%;
+            padding: 0 24px;
+            justify-content: space-between;
+            font-size: $fz-subtitle;
+            line-height: $lh-subtitle;
+
+            p {
+                padding-top: 19px;
+                padding-bottom: 23px;
+            }
+
+            &Left {
+                color: $c-p2;
+                letter-spacing: 0.1em;
+            }
+
+            &Right {
+                color: $c-p3;
+            }
+
+            .i-arrowUpRight {
+                font-size: 14px;
+                font-weight: light;
+                transform: rotate(45deg);
+                margin-left: 4px;
+            }
+        }
+    }
+    
 }
