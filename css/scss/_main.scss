@@ -852,3 +852,102 @@
     }
 
 }
+.awards{
+    padding: 80px 16px;
+    flex-direction: column;
+    align-items: center;
+    @include rwd($md){
+        padding-top: 100px;
+        padding-bottom: 100px;
+    }
+    &__title{
+        text-align: center;
+        text-shadow: 0px 0px 10px rgba($c-n1, 0.6);
+        padding-bottom: 32px;
+    }
+    &__decoration{
+        justify-content: space-between;
+        border-bottom: solid 3px $c-n1;
+        margin-bottom: 60px;
+        width: 100%;
+    }
+    .img{
+        &-flag{
+            width: 36.8px;
+        }
+        &-car{
+            width: 60.29px;
+        }
+    }
+    .l-list{
+        max-width: 800px;
+        @include rwd($xl){
+            max-width: 1090px;
+        }
+        &__item{
+            margin: 0px;
+            &:not(:last-child){
+                margin-bottom: 24px;
+                @include rwd($md){
+                    margin-bottom: 60px;
+                }
+                @include rwd($xl){
+                    margin-right: 30px;
+                    margin-left: 30px;
+                    margin-bottom: 0px;
+                }
+            }
+        }
+    }
+    &Card{
+        flex-direction: column;
+        align-items: center;
+        padding: 24px 24px 32px 24px;
+        height: 552px;
+        img{
+            margin-bottom: 8px;
+        }
+        .cardimg{
+            &-clipboard{
+                width: 80px;
+            }
+            &-coin{
+                width: 80px;
+            }
+        }
+        .card{
+            &-title{
+                color: $c-p1;
+                text-shadow: 0px 0px 10px rgba($c-p1, 0.6);
+                margin-bottom: 40px;
+                @include rwd($md){
+                    margin-bottom: 56px;
+                }
+            }
+            &-body{
+                li{
+                    margin-bottom: 24px;
+                    &:last-child{
+                        margin-bottom: 0px;
+                    }
+                }
+            }
+            &-subtitle{
+                font-weight: bold;
+                margin-bottom: 8px;
+            }
+            &-content{
+                padding-bottom: 8px;
+                span{
+                    color: $c-g1;
+                    padding-left: 8px;
+                }
+            }
+            &-directions{
+                font-size: $c-p3;
+                line-height: $lh-p3;
+                color: $c-n2;
+            }
+        }
+    }
+}
