@@ -596,6 +596,7 @@
 .level {
     flex-direction: column;
     align-items: center;
+    padding-bottom: 80px;
     @include rwd($md){
         padding-top: 120px;
     }
@@ -719,4 +720,135 @@
         }
     }
     
+}
+
+.activity{
+    flex-direction: column;
+    align-items: center;
+    padding: 80px 0;
+    &__titleGroup{
+        margin-bottom: 16px;
+        @include rwd($md){
+            margin-bottom: 80px;
+        }
+    }
+    .img{
+        &-borderDash3-left{
+            width: 86px;
+        }
+        &-borderDash3-right{
+            width: 86px;
+        }
+    }
+    &__title{
+        padding: 16px 36px 20px 36px;
+        @include rwd($md){
+            font-size: $fz-h2;
+            line-height: $lh-h2;
+        }
+    }
+    .l-list{
+        max-width: 520px;
+        @include rwd($xl){
+            max-width: 1184px;
+        }
+    }
+    &Card{
+        flex-direction: column;
+        align-items: center;
+        padding: 29px 0 32px 0;
+        @include rwd($md){
+            flex-direction: row;
+            justify-content: space-evenly;
+            padding: 54px 0;
+            height: 300px;
+        }
+        &:last-child{
+            @include rwd($md){
+                flex-direction: row-reverse;
+            }
+        }
+        &__body{
+            text-align: center;
+            @include rwd($md){
+                text-align: left;
+            }
+            
+        }
+        &__title{
+            margin-bottom: 16px;
+            font-weight: bold;
+            @include rwd($md){
+                font-size: $fz-h3;
+                line-height: $lh-h3;
+            }
+        }
+        &__date{
+            font-size: $fz-p2;
+            line-height: $lh-p2;
+            margin-bottom: 8px;       
+            span{
+                color: $c-g1;
+                padding-right: 8px;
+            }     
+        }
+        .liner{
+            font-size: 12px;
+            line-height: 12px;
+            text-align: center;
+        }
+        &__directions{
+            font-size: $fz-p2;
+            line-height: $lh-p2;
+            padding-top: 8px;
+        }
+        &__arrow{
+           
+            @include rwd($xl){
+                justify-content: flex-end;
+                padding-right: calc(25% - 80px);
+
+            }
+        }   
+        img{
+            margin-bottom: 22px;
+            @include rwd($md){
+                margin-bottom: 0;
+            }
+        }     
+    }
+    
+    .cardimg{
+        &-arrow{
+            width: 30px;
+            margin: 26.5px;
+            justify-content: center;
+            @include rwd($md){
+                width: 40px;
+                margin: 40px;
+            }
+        }
+        &-I3D-pen{
+            width: 74px;
+            @include rwd($md){
+                width: 88.8px;
+            }
+        }
+        &-I3D-clock{
+            width: 74px;
+            @include rwd($md){
+                width: 88.8px;
+            }
+        }
+        &-I3D-folder{
+            width: 86.33px;
+            @include rwd($md){
+                width: 103.6px;
+            }
+        }
+        &-stream{
+            width: 100px;
+        }
+    }
+
 }

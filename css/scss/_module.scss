@@ -1,6 +1,12 @@
 .bg-n5{
     background: $c-n5;
 }
+.bg-n4{
+    background: $c-n4;
+}
+.d-flex{
+    display: flex;
+}
 .d-none{
     display: none;
 }
@@ -22,9 +28,19 @@
         display: none;
     }
 }
+.d-xl-none{
+    @include rwd($xl){
+        display: none;
+    }
+}
 
 .d-lg-block{
     @include rwd($lg){
+        display: block;
+    }
+}
+.d-xl-block{
+    @include rwd($xl){
         display: block;
     }
 }
@@ -65,7 +81,26 @@
 .fontFamily-eContent{
     font-family: $font-family-montserrat;
 }
+.flex{
+    &-xl-column{
+        @include rwd($xl){
+            flex-direction: column;
+        }
+    }
+    &-xl-row{
+        @include rwd($xl){
+            flex-direction: row;
+        }
+    }
 
+}
+.align-items{
+    &-xl-stretch{
+        @include rwd($xl){
+            align-items: stretch;
+        }
+    }
+}
 .headerFixedmt{
     margin-top: 72px;
     @include rwd($lg){
@@ -170,8 +205,21 @@
     }
 }
 .card{
-    &-w300{
+    &-w300 {
         width: 300px;
+    }
+    &-w343{
+        width: 343px;
+    }
+    &-md-w520 {
+        @include rwd($md){
+            width: 520px;
+        }
+    }
+    &-xl-w500{
+        @include rwd($xl){
+            width: 500px;
+        }
     }
 
     &-primary{
@@ -185,7 +233,8 @@
     }
 
     &-tertiary{
-        
+        background:transparent;
+        border: 3px solid #FFFFFF;
     }
     &-flip{
         width: 300px;
