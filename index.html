@@ -279,6 +279,22 @@
             </li>
         </ul>
     </section>
+    <section class="sponsors d-flex bg-n3">
+        <div class="sponsors__titleGroup pos-r text-center">
+            <h3 class="fontFamily-eTitle">SPONSORS</h3>
+            <h4>鑽石級贊助商</h4>
+            <img src="image/star.png" alt="star" class="img-starLeft pos-a">
+            <img src="image/star.png" alt="star" class="img-starRight pos-a">
+        </div>
+        <ul class="l-list d-flex">
+            <li class="l-list__item sponsorsCard card-w160 card-md-w140 radius-32 card-primary"><img src="image/logo_blockStudio.png" alt="版塊設計logo"></li>
+            <li class="l-list__item sponsorsCard card-w160 card-md-w140 radius-32 card-primary"><img src="image/logo_kdanMobile.png" alt="凱鈿行動科技logo"></li>
+            <li class="l-list__item sponsorsCard card-w160 card-md-w140 radius-32 card-primary"><img src="image/logo_titanSoft.png" alt="新加坡商 鈦坦logo"></li>
+        </ul>
+    </section>
+    <footer>
+        <p class="footer text-center fontFamily-eContent">Copyright © 2022 HexSchool.All rights reserved.</p>
+    </footer>
 
 </body>
 
@@ -371,7 +387,24 @@
                 rotationY: 180
             });
     });
-   
+    let tl_awards = gsap.timeline({
+        scrollTrigger: {
+                    trigger: ".awards",
+                    toggleActions: "restart none none restart", //onEnter, onLeave, onEnterBack, and onLeaveBack
+                    markers: true
+                }
+    })
+    tl_awards.to(".img-car",
+        {
+            transform: 'translatex(calc(100% + 32px + 40px - 100vw))', /*padding left+right =32 、 flag width*/
+            duration: 3,
+            ease:"power3.in"
+        });
+    tl_awards.to(".img-flag",
+    {
+        rotation:-45,
+        duration: 0.5,
+    });
 
     // gsap.utils.toArray(".animation-wrapper").forEach((element) => {
     //     hide(element); // 每個元素一進來都必須先隱藏

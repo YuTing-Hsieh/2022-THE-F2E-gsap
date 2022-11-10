@@ -880,7 +880,7 @@
         }
     }
     .l-list{
-        max-width: 800px;
+        max-width: 600px;
         @include rwd($xl){
             max-width: 1090px;
         }
@@ -903,7 +903,9 @@
         flex-direction: column;
         align-items: center;
         padding: 24px 24px 32px 24px;
-        height: 552px;
+        @include rwd($xl){
+            height: 552px;
+        }
         img{
             margin-bottom: 8px;
         }
@@ -950,4 +952,57 @@
             }
         }
     }
+}
+.sponsors{
+    flex-direction: column;
+    align-items: center;
+    padding: 60px 0;
+    @include rwd($md){
+        padding: 80px 0 100px 0;
+    }
+    .img-star{
+        &Left{
+            width: 25px;
+            right: -26px;
+            top: -6px;
+        }
+        &Right{
+            width: 33px;
+            left: -35px;
+            top: 32px;
+        }
+    }
+    &__titleGroup{
+        margin-bottom: 40px;
+    }
+    .l-list{
+        width: 200px;
+        @include rwd($md){
+            width: 600px;
+        }
+        &__item{
+            margin: 0 0 24px 0;    
+            @include rwd($md){
+                margin-left: 30px;
+                margin-right: 30px;
+                margin-bottom: 0px;
+            }        
+            &:last-child{
+                margin-bottom: 0;
+            }
+            
+        }
+    }
+    &Card{
+        padding: 11.36px;
+       
+    }
+   
+}
+
+.footer{
+    padding: 32px 0;
+    font-size: $fz-p4;
+    line-height: $lh-p4;
+    font-weight: 500;
 }

@@ -4,6 +4,9 @@
 .bg-n4{
     background: $c-n4;
 }
+.bg-n3{
+    background: $c-n3;
+}
 .d-flex{
     display: flex;
 }
@@ -179,6 +182,9 @@
     }
     &-yellow{
         background: $c-y1;
+        &:hover{
+            background: lighten($c-y1,10%);
+        }
     }
 }
 
@@ -224,6 +230,12 @@
     }
 }
 .card{
+    &-w160{
+        width: 160px;
+    }
+    &-md-w140{
+        width: 140px;
+    }
     &-w300 {
         width: 300px;
     }
