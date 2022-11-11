@@ -71,25 +71,26 @@
             }
         }
     }
-}
-
-.active {
-    display: flex;
-    align-items: flex-end;
-    flex-direction: column;
-    position: absolute;
-    top: 72px;
-    left: 0;
-    z-index: 100;
-
-    @include rwd($lg) {
-        flex-direction: row;
-        align-items: center;
-        position: relative;
-        top: auto;
-        left: auto
+    &.active {
+        display: flex;
+        align-items: flex-end;
+        flex-direction: column;
+        position: absolute;
+        top: 72px;
+        left: 0;
+        z-index: 100;
+    
+        @include rwd($lg) {
+            flex-direction: row;
+            align-items: center;
+            position: relative;
+            top: auto;
+            left: auto
+        }
     }
 }
+
+
 
 .logo {
     width: 110px;
@@ -952,6 +953,48 @@
             }
         }
     }
+}
+.qa{
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 16px 60px 16px;
+    &__title{
+        text-shadow: 0px 0px 10px rgba($c-n1, 0.6);
+        margin-bottom: 32px;
+    }
+    
+    &__item{
+        margin-bottom: 56px;
+        &:nth-last-child(2){ /*依照整個ul去判斷第幾個元素，非以className去計算最後一個，所以要選倒數第二個*/
+            margin-bottom: 40px;
+        }
+    }
+    &__serial{
+        font-size: $fz-h4;
+        line-height: $lh-h4;
+        font-weight: bold;
+        letter-spacing: 0.1em;
+    }
+    &__heading{
+        font-weight: bold;
+        color: $c-n5;
+        margin-bottom: 16px;
+    }
+    &__content{
+        color: $c-n5;
+    }
+    &__nextItem{
+        font-weight: bold;
+    }
+    
+    .cardimg{
+        &-carot{
+            width: 30px;
+            height: 30px;
+            margin-left: 4px;
+        }
+    }
+
 }
 .sponsors{
     flex-direction: column;

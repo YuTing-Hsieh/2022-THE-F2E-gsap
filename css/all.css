@@ -610,10 +610,27 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
   }
 }
 
+.align-items-center {
+  align-items: center;
+}
 @media screen and (min-width: 1184px) {
   .align-items-xl-stretch {
     align-items: stretch;
   }
+}
+
+.justify-content-end {
+  justify-content: flex-end;
+}
+.justify-content-start {
+  justify-content: flex-start;
+}
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.turn180 {
+  transform: rotateY(180deg);
 }
 
 .headerFixedmt {
@@ -628,16 +645,16 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
 .navbar__item {
   padding: 0 16px;
   color: #858993;
+  font-size: 1.25rem;
+  line-height: 28px;
   position: relative;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: block;
 }
-.navbar__item:hover {
+.navbar__item:hover, .navbar .active {
   color: #FFFFFF;
   text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
 }
-.navbar__item:hover::after {
+.navbar__item:hover::after, .navbar .active::after {
   content: "";
   width: 12px;
   height: 4px;
@@ -647,6 +664,37 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
   bottom: -8px;
   border-radius: 20px;
   box-shadow: 0px 0px 10px rgba(85, 255, 173, 0.6);
+}
+.navbar.nav-tabs {
+  flex-flow: row;
+  overflow-x: scroll;
+  width: 100%;
+}
+@media screen and (min-width: 768px) {
+  .navbar.nav-tabs {
+    width: auto;
+  }
+}
+.navbar.nav-tabs .navbar__item {
+  border: 0px;
+  background: transparent;
+  margin-bottom: 24px;
+  flex: 1;
+  min-width: -webkit-max-content;
+  min-width: -moz-max-content;
+  min-width: max-content;
+}
+
+.nav-tab__content {
+  margin-bottom: 32px;
+}
+.nav-tab__pane {
+  padding: 32px 24px;
+  display: none;
+  max-width: 688px;
+}
+.nav-tab__pane.show {
+  display: block !important;
 }
 
 .btn {
@@ -887,8 +935,7 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
     bottom: -8px;
   }
 }
-
-.active {
+.dropdown.active {
   display: flex;
   align-items: flex-end;
   flex-direction: column;
@@ -898,7 +945,7 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
   z-index: 100;
 }
 @media screen and (min-width: 980px) {
-  .active {
+  .dropdown.active {
     flex-direction: row;
     align-items: center;
     position: relative;
@@ -1775,6 +1822,44 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
   font-size: #6E77E9;
   line-height: 20px;
   color: #858993;
+}
+
+.qa {
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 16px 60px 16px;
+}
+.qa__title {
+  text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.6);
+  margin-bottom: 32px;
+}
+.qa__item {
+  margin-bottom: 56px;
+}
+.qa__item:nth-last-child(2) { /*依照整個ul去判斷第幾個元素，非以className去計算最後一個，所以要選倒數第二個*/
+  margin-bottom: 40px;
+}
+.qa__serial {
+  font-size: 1.5rem;
+  line-height: 36px;
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+.qa__heading {
+  font-weight: bold;
+  color: #06102B;
+  margin-bottom: 16px;
+}
+.qa__content {
+  color: #06102B;
+}
+.qa__nextItem {
+  font-weight: bold;
+}
+.qa .cardimg-carot {
+  width: 30px;
+  height: 30px;
+  margin-left: 4px;
 }
 
 .sponsors {
