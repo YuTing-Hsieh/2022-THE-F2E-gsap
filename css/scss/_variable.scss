@@ -32,12 +32,12 @@ $c-cardStroke:  linear-gradient(100.38deg, #313A65 0%, #313A65 100%);
 // }
 @font-face {
     font-family: 'Monument Extended';
-    src: url(../../fonts/PPMonumentExtended-Regular.otf) format("opentype"),
-        url(../../fonts/PPMonumentExtended-RegularItalic.otf) format("opentype"),
-        url(../../fonts/PPMonumentExtended-Light.otf) format("opentype"),
-        url(../../fonts/PPMonumentExtended-LightItalic.otf) format("opentype"),
-        url(../../fonts/PPMonumentExtended-Black.otf) format("opentype"),
-        url(../../fonts/PPMonumentExtended-BlackItalic.otf) format("opentype");
+    src: url(~/../../fonts/PPMonumentExtended-Regular.otf) format("opentype"),
+        url(~/../../fonts/PPMonumentExtended-RegularItalic.otf) format("opentype"),
+        url(~/../../fonts/PPMonumentExtended-Light.otf) format("opentype"),
+        url(~/../../fonts/PPMonumentExtended-LightItalic.otf) format("opentype"),
+        url(~/../../fonts/PPMonumentExtended-Black.otf) format("opentype"),
+        url(~/../../fonts/PPMonumentExtended-BlackItalic.otf) format("opentype");
     unicode-range: U+00-024F; /*英語系*/
 }
 $font-family: 'Noto Sans TC', sans-serif;
