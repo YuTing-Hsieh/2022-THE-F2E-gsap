@@ -1285,7 +1285,7 @@ h1-E, h2-E, h3-E, h4-E, h5-E {
 .banner {
   flex-direction: column;
   align-items: center;
-  background-image: url("~/../../../image/bannerBg.png");
+  background-image: url("~/./../../image/bannerBg.png");
   background-size: cover;
   color: #06102B;
   margin-bottom: 80px;
